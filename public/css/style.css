@@ -1,0 +1,158 @@
+/** Heropy 튜토리얼에서: https://heropy.blog/2019/04/24/html-css-starter/
+ *
+ * CSS는 다음과 같이 이해할 수 있습니다.
+ * 
+ * 선택자 {
+ *    속성: 값;
+ *    속성: 값;
+ * }
+ */
+
+/* 각 선택자를 완성하십시오. 
+ * 불필요한 선택자를 삭제하고
+ * 필요에 따라 추가 선택자를 추가하십시오. 
+ */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#index {
+  background: url(https://cdn.pixabay.com/photo/2021/10/17/16/53/spicy-jokbal-6718925_960_720.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+header {
+  background-color: white;
+  border-bottom: 1px solid lightgray;
+}
+
+.container {
+  max-width: 980px; /* Aaron */
+  height: 72px; /* Aaron */
+  margin: auto;
+}
+
+.container-left {
+  padding-top: 20px;
+  padding-bottom: 30px; /* Aaron */
+}
+
+.logo {
+  margin: 0 5px 0 20px; /* Aaron */
+  float: left;
+}
+
+.logo img {
+  display: block;
+}
+
+.site-title {
+  display: inline;
+  font-size: 1.5rem;
+  line-height: 1;
+  margin: 0 10px 0 0;
+}
+
+nav.menu {
+  float: left;
+}
+
+nav .menu-item,
+#menu-button {
+  /* Aaron */
+  font-size: 16px;
+  padding: 8px 10px;
+  float: left;
+  line-height: 1;
+  cursor: pointer; /* Aaron */
+}
+
+/* New style */
+.logo a,
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.logo a {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+#menu-button {
+  position: relative;
+  z-index: 1050;
+  /* right: 20px; */
+  display: none;
+  float: right; /* Aaron */
+}
+
+.cover-content {
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+}
+
+.cover-box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.cover-box-2 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+figure img {
+  max-width: 100%;
+  border-radius: 20px;
+}
+
+/* https://raybo.org/posts/2021-03-27-consistent-height-carousels-with-css-gradients-by-hacking-the-bootstrap-5-carousel/ */
+.carousel-item {
+  /* object-fit: cover;
+  object-position: center; */
+  height: 50vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item::before,
+#index::before {
+  content: "";
+  background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.9));
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.carousel-item img {
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.img-404 {
+  margin-top: -40px;
+  margin-bottom: -40px;
+  z-index: -1;
+  position: relative;
+}
+
+.img-404 img {
+  max-height: 50vh;
+}

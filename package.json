@@ -1,0 +1,12 @@
+{
+  "name": "4-express-capstone-soln",
+  "version": "1.0.0",
+  "description": "A website using Express",
+  "main": "main.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon main.js"
+  },
+  "author": "Aaron Snowberger",
+  "license": "ISC"
+}
