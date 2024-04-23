@@ -34,5 +34,15 @@ var courses = [
     {
         title: "Asynchromous Artichoke",
         cost: 25
+    },
+    {
+        title: "Object Oriented Orange Juice",
+        cost: 10
     }
 ];
+
+exports.showCourses = (req,res) => {
+    res.render("courses", {
+        offeredCourses
+    });
+};

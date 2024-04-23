@@ -1,3 +1,4 @@
+app.use(express.static("public"));
 // main.js
 // Capstone 2: Express
 "use strict";
@@ -47,6 +48,9 @@ app.get("/contact", homecontroller.postedSignForm);
  * Listing 12.12 (p. 184)
  * 에러 처리 라우트 
  */
+
+app.use(errorController.pageNotFoundError);
+app.use(errorController.internalServerError);
 
 
 // 3000번 포트로 리스닝 설정
